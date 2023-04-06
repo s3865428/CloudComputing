@@ -7,10 +7,10 @@ loginButton.addEventListener('click', function(e) {
     const password = document.getElementById('password').value;
     
     // Send a POST request to the login API with the email and password
-    fetch('https://objnyy6c0a.execute-api.us-east-1.amazonaws.com/default/loginAPI', {
+    fetch('https://dl3kc5nwm0.execute-api.us-east-1.amazonaws.com/default/loginAPI', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify({
             email: email,
@@ -22,7 +22,7 @@ loginButton.addEventListener('click', function(e) {
         // Check if the response is true or false
         if (data === true) {
             // Redirect to main page
-            window.location.href = 'main-page.html';
+            window.location.href = 'main-page.html?email=' + email;
         } else {
             // Display error message
             const errorMessage = document.getElementById('error-message');
