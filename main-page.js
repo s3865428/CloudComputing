@@ -137,7 +137,7 @@ function subscribe(event) {
         <p class="title">Title: ${title}</p>
         <p class="artist">Artist: ${artist}</p>
         <p>Year: ${year}</p>
-        <button class="remove-btn">Remove</button>
+        <button class="remove-button">Remove</button>
       `;
             subscriptionArea.appendChild(subscriptionItem);
 
